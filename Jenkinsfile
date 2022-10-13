@@ -2,7 +2,7 @@ pipeline {
 agent {
 node {
                  label "built-in"
-				 customWorkspace "/mnt"
+				 customWorkspace "/mnt/projects"
 
 }
 }
@@ -24,7 +24,7 @@ stage('copying index file to httpd'){
 steps {
 
           
-		  sh "cp -r /mnt/repo/test/index.html /var/www/html"
+		  sh "cp -r /mnt/projects/index.html /var/www/html"
 		  sh "chmod 777 /var/www/html/index.html"
 
 
