@@ -13,7 +13,8 @@ stage ('Installing httpd server'){
 steps {
          sh "chmod -R 777 /mnt"
          sh "yum install httpd -y"
-		 sh "systemctl restart httpd"
+         sh "systemctl restart httpd"
+	 sh "rm -rf /mnt/projects"
 
 }
 }
